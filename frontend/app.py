@@ -136,9 +136,9 @@ if st.button(
 
     try:
         response = requests.post(
-            'http://127.0.0.1:8000/predict',
+            'https://clinical-decision-support-system-83wq.onrender.com/predict',
             json=patient_data,
-            timeout=30
+            timeout=60
         )
         if response.status_code== 200:
             result = response.json()
